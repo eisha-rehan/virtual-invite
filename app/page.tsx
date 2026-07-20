@@ -10,6 +10,7 @@ import EventDetails from '@/components/EventDetails'
 import CountdownTimer from '@/components/CountdownTimer'
 import QuoteSection from '@/components/QuoteSection'
 import Closing from '@/components/Closing'
+import BackgroundMusic from '@/components/BackgroundMusic'
 
 function Divider({ color = '#DCEFF7' }: { color?: string }) {
   return (
@@ -30,6 +31,7 @@ export default function Home() {
   return (
     <>
       <EnvelopeOpening onComplete={() => setLoaded(true)} />
+      <BackgroundMusic playing={loaded} />
 
       {loaded && (
         <main
