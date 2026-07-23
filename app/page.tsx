@@ -5,7 +5,6 @@ import EnvelopeOpening from '@/components/EnvelopeOpening'
 import Sparkles from '@/components/Sparkles'
 import Hero from '@/components/Hero'
 import Invitation from '@/components/Invitation'
-import CoupleSection from '@/components/CoupleSection'
 import EventDetails from '@/components/EventDetails'
 import CountdownTimer from '@/components/CountdownTimer'
 import QuoteSection from '@/components/QuoteSection'
@@ -47,9 +46,6 @@ export default function Home() {
             <Hero />
             <Divider color="#DCEFF7" />
             <Invitation />
-            <Divider color="#F8E7EE" />
-            <CoupleSection />
-            <Divider color="#DCEFF7" />
             <EventDetails />
             <Divider color="#DCEFF7" />
             <CountdownTimer />

@@ -96,7 +96,7 @@ export default function BackgroundMusic({ playing }: { playing: boolean }) {
     function prime() {
       if (primedRef.current) return
       primedRef.current = true
-      const ctx = new (window.AudioContext || (window as any).webkitAudioContext)()
+      const ctx = new (window.AudioContext || (window as { webkitAudioContext?: typeof AudioContext }).webkitAudioContext)()
       ctx.resume()
       const master = ctx.createGain()
       master.gain.value = 0
@@ -138,7 +138,7 @@ export default function BackgroundMusic({ playing }: { playing: boolean }) {
     } else {
       // Not yet primed (edge case) — start on next interaction
       function startNow() {
-        const ctx = new (window.AudioContext || (window as any).webkitAudioContext)()
+        const ctx = new (window.AudioContext || (window as { webkitAudioContext?: typeof AudioContext }).webkitAudioContext)()
         ctx.resume()
         const master = ctx.createGain()
         master.connect(ctx.destination)

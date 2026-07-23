@@ -192,25 +192,6 @@ export default function EnvelopeOpening({ onComplete }: { onComplete: () => void
               </div>
             </motion.div>
 
-            {/* ── Envelope flap (3-D fold open) ──────────────── */}
-            <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 148, perspective: 560, zIndex: 9 }}>
-              <motion.div
-                style={{
-                  width: '100%', height: '100%',
-                  background: 'linear-gradient(175deg, #C4E0F0 0%, #DCEFF7 55%, #EBF6FC 100%)',
-                  clipPath: 'polygon(0 0, 100% 0, 50% 70%)',
-                  transformOrigin: 'top center',
-                  borderRadius: '22px 22px 0 0',
-                  boxShadow: 'inset 0 -4px 10px rgba(140,180,210,0.12)',
-                }}
-                animate={phase >= 2
-                  ? { rotateX: -174, opacity: 0.4 }
-                  : { rotateX: 0, opacity: 1 }
-                }
-                transition={{ duration: 1.05, ease: [0.4, 0, 0.2, 1] }}
-              />
-            </div>
-
             {/* ── Invitation card rises from envelope ─────────── */}
             <motion.div
               style={{
@@ -236,6 +217,26 @@ export default function EnvelopeOpening({ onComplete }: { onComplete: () => void
                 Engagement · 2026
               </p>
             </motion.div>
+
+            {/* ── Envelope flap (3-D fold open) ──────────────── */}
+            <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 148, perspective: 560, zIndex: 9 }}>
+              <motion.div
+                style={{
+                  width: '100%', height: '100%',
+                  background: 'linear-gradient(175deg, #C4E0F0 0%, #DCEFF7 55%, #EBF6FC 100%)',
+                  clipPath: 'polygon(0 0, 100% 0, 50% 70%)',
+                  transformOrigin: 'top center',
+                  borderRadius: '22px 22px 0 0',
+                  boxShadow: 'inset 0 -4px 10px rgba(140,180,210,0.12)',
+                }}
+                animate={phase >= 2
+                  ? { rotateX: -174, opacity: 0.4 }
+                  : { rotateX: 0, opacity: 1 }
+                }
+                transition={{ duration: 1.05, ease: [0.4, 0, 0.2, 1] }}
+              />
+            </div>
+
 
           </motion.div>
         </motion.div>
