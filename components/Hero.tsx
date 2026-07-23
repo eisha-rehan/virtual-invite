@@ -1,7 +1,6 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import ShimmeringHeart from './ShimmeringHeart'
 
 const ease = [0.4, 0, 0.2, 1] as const
 
