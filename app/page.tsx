@@ -37,7 +37,7 @@ export default function Home() {
           className="relative w-full max-w-[430px] mx-auto min-h-screen"
           style={{
             background:
-              'linear-gradient(180deg, #E8F3FA 0%, #EDF5FB 30%, #EAF2F8 70%, #E8F3FA 100%)',
+              'linear-gradient(180deg, #D6EBF7 0%, #DAEeF8 30%, #D8ECF6 70%, #D6EBF7 100%)',
           }}
         >
           <Sparkles />
