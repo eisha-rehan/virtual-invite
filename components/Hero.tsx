@@ -138,7 +138,7 @@ export default function Hero() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.72, type: 'spring', stiffness: 210, damping: 14 }}
           >
-            <ShimmeringHeart size="lg" />
+            <p className="font-serif italic" style={{ fontSize: 'clamp(48px, 14vw, 64px)', color: '#C4A4B2', lineHeight: 1 }}>&amp;</p>
           </motion.div>
 
           <motion.h1

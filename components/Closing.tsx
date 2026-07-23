@@ -1,17 +1,15 @@
 'use client'
 
 import SectionReveal from './SectionReveal'
-import ShimmeringHeart from './ShimmeringHeart'
-
 export default function Closing() {
   return (
     <section className="px-8 py-24 pb-36 flex flex-col items-center text-center">
       <SectionReveal>
         <div className="max-w-[280px] mx-auto space-y-9">
-          {/* Heart ornament */}
+          {/* Ornament */}
           <div className="flex items-center justify-center gap-4" aria-hidden="true">
             <div className="w-10 h-px bg-[#DCEFF7]" />
-            <ShimmeringHeart size="sm" />
+            <span className="text-[#C4A4B2] text-[11px]">✦</span>
             <div className="w-10 h-px bg-[#DCEFF7]" />
           </div>
 

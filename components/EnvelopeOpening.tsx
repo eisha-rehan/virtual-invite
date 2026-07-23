@@ -210,7 +210,7 @@ export default function EnvelopeOpening({ onComplete }: { onComplete: () => void
               transition={{ duration: 0.95, ease: [0.4, 0, 0.2, 1] }}
             >
               <p style={{ fontFamily: 'var(--font-cormorant), Georgia, serif', fontSize: 26, fontStyle: 'italic', color: '#1E2D3A', lineHeight: 1.0, letterSpacing: '-0.01em' }}>Shaheer</p>
-              <p style={{ fontSize: 18, color: '#C4A4B2', margin: '5px 0' }}>♡</p>
+              <p style={{ fontFamily: 'var(--font-cormorant), Georgia, serif', fontSize: 26, fontStyle: 'italic', color: '#C4A4B2', margin: '4px 0', lineHeight: 1 }}>&amp;</p>
               <p style={{ fontFamily: 'var(--font-cormorant), Georgia, serif', fontSize: 26, fontStyle: 'italic', color: '#1E2D3A', lineHeight: 1.0, letterSpacing: '-0.01em' }}>Hafsa</p>
               <div style={{ width: 36, height: 1, background: '#DCEFF7', margin: '10px 0 8px' }} />
               <p style={{ fontFamily: 'var(--font-inter), system-ui, sans-serif', fontSize: 9, letterSpacing: '0.32em', textTransform: 'uppercase', color: '#8BA7B8' }}>
