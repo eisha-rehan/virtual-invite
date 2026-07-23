@@ -14,10 +14,7 @@ export default function Invitation() {
           </div>
 
           <p className="font-serif text-[22px] italic text-[#4A6070] leading-relaxed">
-            Together with our families,
-          </p>
-          <p className="font-serif text-[22px] italic text-[#4A6070] leading-relaxed">
-            we joyfully invite you to celebrate our engagement.
+            We joyfully invite you to join us to celebrate their special day.
           </p>
 
           <div className="flex items-center justify-center gap-3 pt-1" aria-hidden="true">

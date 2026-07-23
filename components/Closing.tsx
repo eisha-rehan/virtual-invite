@@ -18,16 +18,6 @@ export default function Closing() {
             We can&apos;t wait to celebrate with you.
           </p>
 
-          {/* Sign-off */}
-          <div className="space-y-2 pt-3">
-            <p className="font-serif text-[22px] italic text-[#8BA7B8]">
-              Shaheer &amp; Hafsa
-            </p>
-            <p className="font-sans text-[10px] tracking-[0.35em] uppercase text-[#A8BCC8]">
-              26 · 09 · 2026
-            </p>
-          </div>
-
           {/* Final ornament */}
           <div className="flex items-center justify-center gap-2 pt-2" aria-hidden="true">
             <span className="text-[#DCEFF7] text-[10px]">✦</span>

@@ -20,7 +20,7 @@ export default function Icon() {
           color: '#7A9AAD',
         }}
       >
-        ♡
+        &
       </div>
     ),
     { ...size }

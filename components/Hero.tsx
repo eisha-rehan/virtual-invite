@@ -159,7 +159,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 1.0, ease }}
         >
           <p className="font-sans text-[11px] tracking-[0.32em] uppercase text-[#5A7285]">
-            We&apos;re Getting Engaged
+            Are Getting Engaged
           </p>
           <p className="font-serif text-xl italic text-[#8BA7B8]">
             26 September 2026
