@@ -35,7 +35,8 @@ export default function BackgroundMusic({ playing }: { playing: boolean }) {
       promise.then(() => fadeIn()).catch(() => {
         // Autoplay blocked — wait for first tap
         function onGesture() {
-          audio.play().then(fadeIn).catch(() => {})
+          if (!audioRef.current) return
+          audioRef.current.play().then(fadeIn).catch(() => {})
         }
         document.addEventListener('click',      onGesture, { once: true })
         document.addEventListener('touchstart', onGesture, { once: true })
