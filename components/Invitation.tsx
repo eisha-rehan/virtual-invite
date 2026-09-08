@@ -1,10 +1,12 @@
 'use client'
 
 import SectionReveal from './SectionReveal'
+import Fireworks from './Fireworks'
 
 export default function Invitation() {
   return (
-    <section className="px-8 py-24 flex flex-col items-center text-center">
+    <section className="relative px-8 py-36 flex flex-col items-center text-center overflow-hidden">
+      <Fireworks />
       <SectionReveal>
         <div className="max-w-[300px] mx-auto space-y-5">
           <div className="flex items-center justify-center gap-3" aria-hidden="true">
@@ -14,7 +16,7 @@ export default function Invitation() {
           </div>
 
           <p className="font-serif text-[22px] italic text-[#4A6070] leading-relaxed">
-            We joyfully invite you to join us to celebrate their special day.
+            Please join us to celebrate their special day.
           </p>
 
           <div className="flex items-center justify-center gap-3 pt-1" aria-hidden="true">

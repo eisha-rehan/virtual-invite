@@ -151,51 +151,23 @@ export default function Hero() {
           </motion.h1>
         </div>
 
-        {/* Subtitle */}
+        {/* Subtitle + ornament */}
         <motion.div
-          className="flex flex-col items-center gap-2 -mt-1"
+          className="flex flex-col items-center gap-2 mt-5"
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.0, ease }}
         >
+          <div className="flex items-center gap-3 mb-1" aria-hidden="true">
+            <div className="w-7 h-px bg-[#DCEFF7]" />
+            <span className="text-[#DCEFF7] text-[10px]">✦</span>
+            <div className="w-7 h-px bg-[#DCEFF7]" />
+          </div>
           <p className="font-sans text-[11px] tracking-[0.32em] uppercase text-[#5A7285]">
             Are Getting Engaged
           </p>
-          <p className="font-serif text-xl italic text-[#8BA7B8]">
-            26 September 2026
-          </p>
         </motion.div>
 
-        {/* Ornament */}
-        <motion.div
-          className="flex items-center gap-3 mt-2"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 1.25 }}
-          aria-hidden="true"
-        >
-          <div className="w-7 h-px bg-[#DCEFF7]" />
-          <span className="text-[#DCEFF7] text-[10px]">✦</span>
-          <div className="w-7 h-px bg-[#DCEFF7]" />
-        </motion.div>
-
-        {/* Scroll hint */}
-        <motion.div
-          className="mt-8 flex flex-col items-center gap-2"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 1.5 }}
-        >
-          <p className="font-sans text-[9px] tracking-[0.4em] uppercase text-[#A8BCC8]">
-            Scroll to begin
-          </p>
-          <motion.div
-            className="w-px h-8 rounded-full"
-            style={{ background: 'linear-gradient(to bottom, #DCEFF7, transparent)' }}
-            animate={{ y: [0, 6, 0] }}
-            transition={{ duration: 1.6, repeat: Infinity, ease: 'easeInOut' }}
-          />
-        </motion.div>
       </div>
     </section>
   )

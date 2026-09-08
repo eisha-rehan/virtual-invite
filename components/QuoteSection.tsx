@@ -58,7 +58,7 @@ export default function QuoteSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              Beginning of a beautiful forever.
+              Somewhere between a moment and a lifetime, forever begins..
             </motion.p>
           </blockquote>
 
