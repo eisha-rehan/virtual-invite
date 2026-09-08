@@ -1,7 +1,7 @@
 'use client'
 
 import { motion, AnimatePresence } from 'framer-motion'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 type Phase = 0 | 1 | 2 | 3 | 4
 
@@ -15,19 +15,27 @@ const BOW_H = 106     // bow SVG height
 const BOW_TOP = RIBBON_Y - 60  // bow top edge (above ribbon)
 // ─────────────────────────────────────────────────────────────────
 
-export default function EnvelopeOpening({ onComplete }: { onComplete: () => void }) {
+export default function EnvelopeOpening({ onComplete, onStart }: { onComplete: () => void; onStart?: () => void }) {
   const [phase, setPhase] = useState<Phase>(0)
   const [visible, setVisible] = useState(true)
+  const [started, setStarted] = useState(false)
+  const timersRef = useRef<ReturnType<typeof setTimeout>[]>([])
 
-  useEffect(() => {
-    const timers = [
-      setTimeout(() => setPhase(1), 1100),   // bow unties
-      setTimeout(() => setPhase(2), 2300),   // flap opens
-      setTimeout(() => setPhase(3), 3300),   // card rises
-      setTimeout(() => setPhase(4), 4400),   // fade out
+  function handleOpen() {
+    if (started) return
+    setStarted(true)
+    onStart?.()
+    timersRef.current = [
+      setTimeout(() => setPhase(1), 1100),
+      setTimeout(() => setPhase(2), 2300),
+      setTimeout(() => setPhase(3), 3300),
+      setTimeout(() => setPhase(4), 4400),
       setTimeout(() => setVisible(false), 5000),
     ]
-    return () => timers.forEach(clearTimeout)
+  }
+
+  useEffect(() => {
+    return () => timersRef.current.forEach(clearTimeout)
   }, [])
 
   return (
@@ -35,15 +43,29 @@ export default function EnvelopeOpening({ onComplete }: { onComplete: () => void
       {visible && (
         <motion.div
           className="fixed inset-0 z-50 flex items-center justify-center overflow-hidden"
-          style={{ background: 'linear-gradient(160deg, #E8F3FA 0%, #EAF5FB 45%, #EDF0F7 100%)' }}
+          style={{ background: 'linear-gradient(160deg, #E8F3FA 0%, #EAF5FB 45%, #EDF0F7 100%)', cursor: started ? 'default' : 'pointer' }}
           exit={{ opacity: 0 }}
           transition={{ duration: 1.0, ease: [0.4, 0, 0.2, 1] }}
+          onClick={!started ? handleOpen : undefined}
         >
           {/* Ambient blobs */}
           <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
             <div style={{ position: 'absolute', top: '-18%', left: '-18%', width: '58%', height: '58%', borderRadius: '50%', background: '#DCEFF7', opacity: 0.45, filter: 'blur(80px)' }} />
             <div style={{ position: 'absolute', bottom: '-18%', right: '-18%', width: '52%', height: '52%', borderRadius: '50%', background: '#F8E7EE', opacity: 0.42, filter: 'blur(80px)' }} />
           </div>
+
+          {/* Tap hint */}
+          {!started && (
+            <motion.p
+              className="absolute bottom-14 left-1/2 -translate-x-1/2 font-sans uppercase tracking-[0.3em] pointer-events-none"
+              style={{ fontSize: 10, color: '#8BA7B8', whiteSpace: 'nowrap' }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: [0, 0.8, 0.4, 0.8] }}
+              transition={{ delay: 0.9, duration: 2.4, repeat: Infinity, ease: 'easeInOut' }}
+            >
+              Tap anywhere to open
+            </motion.p>
+          )}
 
           {/* Scene wrapper — fades & shrinks on exit */}
           <motion.div

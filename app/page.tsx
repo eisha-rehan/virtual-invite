@@ -26,11 +26,12 @@ function Divider({ color = '#DCEFF7' }: { color?: string }) {
 
 export default function Home() {
   const [loaded, setLoaded] = useState(false)
+  const [musicStarted, setMusicStarted] = useState(false)
 
   return (
     <>
-      <EnvelopeOpening onComplete={() => setLoaded(true)} />
-      <BackgroundMusic playing={loaded} />
+      <EnvelopeOpening onComplete={() => setLoaded(true)} onStart={() => setMusicStarted(true)} />
+      <BackgroundMusic playing={musicStarted} />
 
       {loaded && (
         <main
