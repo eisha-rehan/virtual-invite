@@ -4,7 +4,8 @@ import SectionReveal from './SectionReveal'
 
 // ─────────────────────────────────────────────────────────────────────────────
 // UPDATE VENUE & TIME HERE when confirmed.
-const VENUE = 'To Be Announced'
+const VENUE     = 'Edge Lawn by Hanif Rajput'
+const VENUE_MAP = 'https://maps.google.com/maps?daddr=Marquees+Complex+Rd,+Nawaz,+Islamabad'
 const TIME  = '8:00 PM'
 // ─────────────────────────────────────────────────────────────────────────────
 
@@ -79,14 +80,27 @@ export default function EventDetails() {
               <p className="font-sans text-[10px] tracking-[0.3em] uppercase text-[#C4A4B2] mb-3">
                 Venue
               </p>
-              <p className="font-serif text-[26px] italic text-[#2C3E50]">
+              <p className="font-serif text-[24px] italic text-[#2C3E50] leading-snug">
                 {VENUE}
               </p>
-              {VENUE === 'To Be Announced' && (
-                <p className="font-sans text-[11px] text-[#C4A4B2] mt-2">
-                  Details will be shared soon
-                </p>
-              )}
+              <p className="font-sans text-[11px] text-[#C4A4B2] mt-1">
+                Marquees Complex Rd, Islamabad
+              </p>
+              <a
+                href={VENUE_MAP}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 mt-4 font-sans text-[10px] tracking-[0.22em] uppercase"
+                style={{
+                  color: '#8BA7B8',
+                  border: '1px solid rgba(160,210,235,0.5)',
+                  borderRadius: 20,
+                  padding: '6px 14px',
+                  textDecoration: 'none',
+                }}
+              >
+                📍 Get Directions
+              </a>
             </div>
           </SectionReveal>
         </div>
