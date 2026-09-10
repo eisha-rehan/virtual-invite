@@ -102,15 +102,20 @@ export default function Hero() {
       {/* ── Main content ── */}
       <div className="relative z-10 flex flex-col items-center text-center gap-4 w-full max-w-xs mx-auto">
 
-        {/* Eyebrow */}
-        <motion.p
-          className="font-sans text-[10px] tracking-[0.4em] uppercase text-[#8BA7B8]"
+        {/* Eyebrow — parents' names */}
+        <motion.div
+          className="flex flex-col items-center gap-1"
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1, ease }}
         >
-          An Invitation
-        </motion.p>
+          <p className="font-serif italic text-[18px] text-[#4A6070]">
+            Rehan Qasim &amp; Fauzia Rehan
+          </p>
+          <p className="font-sans text-[10px] tracking-[0.25em] text-[#8BA7B8]">
+            joyfully invite you to celebrate the engagement of
+          </p>
+        </motion.div>
 
         {/* Thin line */}
         <motion.div
@@ -151,21 +156,17 @@ export default function Hero() {
           </motion.h1>
         </div>
 
-        {/* Subtitle + ornament */}
+        {/* Bottom ornament */}
         <motion.div
-          className="flex flex-col items-center gap-2 mt-5"
-          initial={{ opacity: 0, y: 18 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.0, ease }}
+          className="flex items-center gap-3 mt-5"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 1.0 }}
+          aria-hidden="true"
         >
-          <div className="flex items-center gap-3 mb-1" aria-hidden="true">
-            <div className="w-7 h-px bg-[#DCEFF7]" />
-            <span className="text-[#DCEFF7] text-[10px]">✦</span>
-            <div className="w-7 h-px bg-[#DCEFF7]" />
-          </div>
-          <p className="font-sans text-[11px] tracking-[0.32em] uppercase text-[#5A7285]">
-            Are Getting Engaged
-          </p>
+          <div className="w-7 h-px bg-[#DCEFF7]" />
+          <span className="text-[#DCEFF7] text-[10px]">✦</span>
+          <div className="w-7 h-px bg-[#DCEFF7]" />
         </motion.div>
 
       </div>
