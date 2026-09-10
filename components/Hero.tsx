@@ -113,7 +113,7 @@ export default function Hero() {
             Rehan Qasim &amp; Fauzia Rehan
           </p>
           <p className="font-sans text-[10px] tracking-[0.25em] text-[#8BA7B8]">
-            joyfully invite you to celebrate the engagement of
+            invite you to celebrate the engagement of
           </p>
         </motion.div>
 
