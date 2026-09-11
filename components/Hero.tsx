@@ -177,7 +177,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 1.6 }}
         >
           <p className="font-sans text-[9px] tracking-[0.4em] uppercase text-[#A8BCC8]">
-            Scroll to explore
+            Scroll for Details
           </p>
           <motion.div
             animate={{ y: [0, 7, 0] }}
