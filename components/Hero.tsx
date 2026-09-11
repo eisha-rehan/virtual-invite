@@ -169,6 +169,26 @@ export default function Hero() {
           <div className="w-7 h-px bg-[#DCEFF7]" />
         </motion.div>
 
+        {/* Scroll hint */}
+        <motion.div
+          className="mt-10 flex flex-col items-center gap-2"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 1.6 }}
+        >
+          <p className="font-sans text-[9px] tracking-[0.4em] uppercase text-[#A8BCC8]">
+            Scroll to explore
+          </p>
+          <motion.div
+            animate={{ y: [0, 7, 0] }}
+            transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
+          >
+            <svg width="16" height="10" viewBox="0 0 16 10" fill="none" aria-hidden="true">
+              <path d="M2 2 L8 8 L14 2" stroke="#A8BCC8" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </motion.div>
+        </motion.div>
+
       </div>
     </section>
   )

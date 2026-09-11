@@ -7,7 +7,6 @@ import Hero from '@/components/Hero'
 import Invitation from '@/components/Invitation'
 import EventDetails from '@/components/EventDetails'
 import CountdownTimer from '@/components/CountdownTimer'
-import QuoteSection from '@/components/QuoteSection'
 import Closing from '@/components/Closing'
 import BackgroundMusic from '@/components/BackgroundMusic'
 
@@ -50,8 +49,6 @@ export default function Home() {
             <EventDetails />
             <Divider color="#DCEFF7" />
             <CountdownTimer />
-            <Divider color="#F8E7EE" />
-            <QuoteSection />
             <Closing />
           </div>
         </main>

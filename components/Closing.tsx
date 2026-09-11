@@ -44,13 +44,6 @@ export default function Closing() {
             </p>
           </div>
 
-          {/* Sign off */}
-          <div className="space-y-2 pt-2">
-            <p className="font-serif text-[22px] italic text-[#8BA7B8]">
-              Shaheer &amp; Hafsa
-            </p>
-          </div>
-
           {/* Final ornament */}
           <motion.div
             className="flex items-center justify-center gap-2"
