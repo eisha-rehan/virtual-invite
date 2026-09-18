@@ -26,12 +26,12 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: 'Shaheer & Hafsa | Engagement Invitation',
-  description: 'Join us in celebrating our engagement on 26 September 2026.',
+  description: 'Join us in celebrating our engagement on 3 October 2026 at 7:30 PM.',
   keywords: ['engagement', 'invitation', 'Shaheer', 'Hafsa', '2026', 'ceremony'],
   authors: [{ name: 'Shaheer & Hafsa' }],
   openGraph: {
     title: 'Shaheer & Hafsa | Engagement Invitation',
-    description: 'Join us in celebrating our engagement on 26 September 2026.',
+    description: 'Join us in celebrating our engagement on 3 October 2026 at 7:30 PM.',
     type: 'website',
     locale: 'en_US',
     siteName: 'Shaheer & Hafsa',
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Shaheer & Hafsa | Engagement Invitation',
-    description: 'Join us in celebrating our engagement on 26 September 2026.',
+    description: 'Join us in celebrating our engagement on 3 October 2026 at 7:30 PM.',
   },
   robots: {
     index: false,
