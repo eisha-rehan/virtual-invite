@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react'
 import SectionReveal from './SectionReveal'
 
 // Target: 26 September 2026, 8:00 PM Pakistan Standard Time (UTC+5)
-const TARGET = new Date('2026-09-26T19:00:00+05:00')
+const TARGET = new Date('2026-10-03T19:30:00+05:00')
 
 function getTimeLeft() {
   const diff = TARGET.getTime() - Date.now()
@@ -120,7 +120,7 @@ export default function CountdownTimer() {
             animate={{ opacity: [0.6, 1, 0.6] }}
             transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
           >
-            26 September 2026 · 7:00 PM
+            3 October 2026 · 7:30 PM
           </motion.p>
 
         </div>

@@ -6,7 +6,7 @@ import SectionReveal from './SectionReveal'
 // UPDATE VENUE & TIME HERE when confirmed.
 const VENUE     = 'Edge Lawn by Hanif Rajput'
 const VENUE_MAP = 'https://maps.google.com/maps?daddr=Marquees+Complex+Rd,+Nawaz,+Islamabad'
-const TIME  = '7:00 PM'
+const TIME  = '7:30 PM'
 // ─────────────────────────────────────────────────────────────────────────────
 
 export default function EventDetails() {
@@ -49,7 +49,7 @@ export default function EventDetails() {
                 Date
               </p>
               <p className="font-serif text-[26px] italic text-[#2C3E50]">
-                26 September 2026
+                3 October 2026
               </p>
               <p className="font-sans text-[11px] text-[#A8BCC8] mt-2 tracking-wide">
                 Saturday
