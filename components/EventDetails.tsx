@@ -49,10 +49,10 @@ export default function EventDetails() {
                 Date
               </p>
               <p className="font-serif text-[26px] italic text-[#2C3E50]">
-                3 October 2026
+                4 October 2026
               </p>
               <p className="font-sans text-[11px] text-[#A8BCC8] mt-2 tracking-wide">
-                Saturday
+                Sunday
               </p>
               <div className="w-8 h-px bg-[#DCEFF7] mx-auto my-3" />
               <p className="font-sans text-[10px] tracking-[0.28em] uppercase text-[#8BA7B8] mb-1">

@@ -113,7 +113,7 @@ export default function Image() {
               fontFamily: 'system-ui, sans-serif',
             }}
           >
-            26 September 2026
+            4 October 2026
           </div>
         </div>
       </div>
