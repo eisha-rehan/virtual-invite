@@ -5,7 +5,7 @@ import SectionReveal from './SectionReveal'
 // ─────────────────────────────────────────────────────────────────────────────
 // UPDATE VENUE & TIME HERE when confirmed.
 const VENUE     = 'Edge Lawn by Hanif Rajput'
-const VENUE_MAP = 'https://maps.google.com/maps?daddr=Marquees+Complex+Rd,+Nawaz,+Islamabad'
+const VENUE_MAP = 'https://www.google.com/maps/place/Edge+Lawn+by+Hanif+Rajput,+Marquees+Complex+Rd,+Nawaz,+Islamabad/data=!4m2!3m1!1s0x38dfebb1585d5427:0xdb0d97c2bcf7d160'
 const TIME  = '7:30 PM'
 // ─────────────────────────────────────────────────────────────────────────────
 
